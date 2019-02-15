@@ -1,0 +1,12 @@
+location_agence_homepage:
+    path:     /
+    defaults: { _controller: LocationAgenceBundle:Default:index }
+addDriver:
+    path: /addDriver
+    defaults: { _controller: LocationAgenceBundle:Chauffeur:add }
+listCars:
+    path: /listCars
+    defaults: { _controller: LocationAgenceBundle:Car:list }
+Louer:
+    path: /louer
+    defaults: { _controller: LocationAgenceBundle:Car:louer }

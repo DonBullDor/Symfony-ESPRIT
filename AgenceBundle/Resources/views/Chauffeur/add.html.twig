@@ -1,0 +1,17 @@
+<h3>Ajout d'un chauffeur</h3>
+{{ form(Form) }}
+<script src="{{ asset('js/jquery-3.2.1.js') }}"></script>
+<script>
+    $(document).ready(function () {
+        $("#location_agencebundle_chauffeur_cin").keyup(function () {
+            const content = $("#location_agencebundle_chauffeur_cin").val()
+            if(content.length == 8){
+                $('#location_agencebundle_chauffeur_cin').css('background','green');
+            }
+            else
+            {
+                $('#location_agencebundle_chauffeur_cin').css('background','red')
+            }
+        })
+    })
+</script>
