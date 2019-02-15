@@ -1,0 +1,19 @@
+<h3>Ajout d'une amende</h3>
+{{ form(Form) }}
+<script src="{{ asset('js/jquery-3.2.1.js') }}"></script>
+<script>
+    $(document).ready(function () {
+        /******* controle sur le montant ****/
+        /***** additional question ****/
+        $("#amendesbundle_amende_montant").keyup(function () {
+        content = $("#amendesbundle_amende_montant").val()
+            if(content.length == 3){
+                $("#amendesbundle_amende_montant").css('background','green')
+            }
+            else
+                $("#amendesbundle_amende_montant").css('background','red')
+
+        })
+    })
+
+</script>

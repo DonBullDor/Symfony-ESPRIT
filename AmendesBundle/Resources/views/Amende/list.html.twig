@@ -1,0 +1,32 @@
+<h3>Liste des amendes</h3>
+<table border="2">
+    <th>Montant</th>
+    <th>Date de création</th>
+    <th>Penalité</th>
+    <th>Payée</th>
+    <th>CIN Personne</th>
+
+    {% for amende in amendes %}
+    <tr>
+        <td>{{ amende.montant }}</td>
+        <td>{{ amende.date|date() }}</td>
+        <td>{{ amende.penalite }}</td>
+        <td>{{ amende.payee }}</td>
+        <td>{{ amende.Personne.cin }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{{ path('UpdateAmende') }}">Mettre à jour les pénalités des amendes non payées</a>
+<div style="border: 2px solid red">
+    Ce lien permet de calculer ....
+</div>
+<script src="{{ asset('js/jquery-3.2.1.js') }}"></script>
+<script>
+    $(document).ready(function () {
+    $("div").hide();
+    $("a").mouseenter(function () {
+        $("div").show()
+    });
+
+    });
+</script>

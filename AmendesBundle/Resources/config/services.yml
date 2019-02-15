@@ -1,0 +1,4 @@
+services:
+#    amendes.example:
+#        class: AmendesBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

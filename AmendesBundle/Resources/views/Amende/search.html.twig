@@ -1,0 +1,19 @@
+<h3>Rechercher Amende</h3>
+{{ form(Form) }}
+<h3>Liste des amendes</h3>
+<table border="2">
+    <th>Montant</th>
+    <th>Date de création</th>
+    <th>Penalité</th>
+    <th>Payée</th>
+    <th>CIN Personne</th>
+    {% for amende in amendes %}
+        <tr>
+            <td>{{ amende.montant }}</td>
+            <td>{{ amende.date|date() }}</td>
+            <td>{{ amende.penalite }}</td>
+            <td>{{ amende.payee }}</td>
+            <td>{{ amende.Personne.cin }}</td>
+        </tr>
+    {% endfor %}
+</table>
